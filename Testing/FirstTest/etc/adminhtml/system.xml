@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="addimage" translate="label" sortOrder="10">
+            <label>Add Image</label>
+        </tab>
+        <section id="addsection" translate="label" sortOrder="130" showInDefault="1" showInWebsite="1" showInStore="1">
+            <class>separator-top</class>
+            <label>Add Image section</label>
+            <tab>addimage</tab>
+            <resource>Testing_FirstTest::addsection_config</resource>
+            <group id="general" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="0" showInStore="0">
+                <label>General Configuration</label>
+
+                <field id="image" type="image" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Image</label>
+                    <backend_model>Magento\Config\Model\Config\Backend\Image</backend_model>
+                    <upload_dir config="system/filesystem/media" scope_info="1">testing/firsttest/addimage</upload_dir>
+                    <base_url type="media" scope_info="1">testing/firsttest/addimage</base_url>
+                </field>
+
+                <field id="image_width" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>image_width</label>
+                </field>
+
+                <field id="image_height" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>image_height</label>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>
